@@ -9,7 +9,7 @@ print('Enter an integer as the exponent:', end=' ')
 exponent = int(input())
 print(base, "raised to the power of", exponent, "is", base**exponent, "!!")
 
-print('-------Addition and Subtraction-------')
+print('------Addition and Subtraction-----')
 print('Enter a starter integer:', end=' ')
 integer = int(input())
 print('Enter an integer to add:', end=' ')
