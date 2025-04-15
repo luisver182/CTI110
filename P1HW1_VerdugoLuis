@@ -1,5 +1,25 @@
 # Verdugo Luis 
 # 04/14/2025
 # P1HW1
-# exponents additions and substractions
-fsdf
+# exponents, additions and substractions
+print('-------Calculating Exponents-------')
+print('Enter an integer as the base value:', end=' ')
+base = int(input())
+print('Enter an integer as the exponent:', end=' ')
+exponent = int(input())
+print(base, "raised to the power of", exponent, "is", base**exponent, "!!")
+
+print('-------Addition and Subtraction-------')
+print('Enter a starter integer:', end=' ')
+integer = int(input())
+print('Enter an integer to add:', end=' ')
+add = int(input())
+print('Enter a integer to subtract:', end=' ')
+subtract = int(input())
+print(integer, "+", add, "-", subtract, "is equal to", integer+add-subtract)
+
+
+
+
+
+
