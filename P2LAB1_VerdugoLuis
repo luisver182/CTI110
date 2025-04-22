@@ -2,6 +2,7 @@
 # 04/21/2025
 # P2LAB1
 # circle math calculations
+
 import math
 radius = float(input("what is the radius of the circle: "))
 diameter = 2 * radius
