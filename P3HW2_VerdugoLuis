@@ -1,0 +1,31 @@
+# Verdugo Luis
+# 04/29/2025
+# P3HW2
+# Evaluate employee overtime info
+
+# request employee's information
+name = input("enter employee's name: ")
+hours_worked = float (input("Enter number of hours worked: "))
+pay_rate = float (input("Enter employee's hourly pay rate: "))
+
+# evaluate over time
+if hours_worked > 40:
+    # calculate overtime 
+    overtime_hours = hours_worked - 40
+    #calculate overpay
+    over_pay = overtime_hours * (pay_rate * 1.5)
+    # calculate regular hours
+    reg_pay = 40 * pay_rate
+    #calculate gross pay
+    gross_pay = reg_pay + over_pay
+else:
+  over_pay = 0 
+  overtime_hours = 0
+  reg_pay = hours_worked * pay_rate        
+print("-" * 110 )  
+# display employee's name                                                              
+print("Employee name: ", name, "\n")
+print("Hours worked", "pay rate", "Overtime", " Overtime pay", "  Reg hour pay", " Gross pay", sep= " " *9)
+print("-" * 110)
+# display results
+print(f"{hours_worked:<20.2f} {pay_rate:<16.2f} {overtime_hours:<17.2f} {over_pay:<22.2f} {reg_pay:<21.2f} {gross_pay:.2f}")
