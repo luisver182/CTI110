@@ -21,7 +21,8 @@ if hours_worked > 40:
 else:
   over_pay = 0 
   overtime_hours = 0
-  reg_pay = hours_worked * pay_rate        
+  reg_pay = hours_worked * pay_rate
+  gross_pay = reg_pay
 print("-" * 110 )  
 # display employee's name                                                              
 print("Employee name: ", name, "\n")
