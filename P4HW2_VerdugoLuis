@@ -1,0 +1,57 @@
+# Verdugo Luis
+# 05/10/2025
+# P4HW2
+# Evaluate employees payment info &summary
+# Initialize totals
+
+total_reg_pay = 0.0
+total_overtime_pay = 0.0
+total_gross_pay = 0.0
+employee_count = 0
+
+while True:
+    # input employee name
+    name = input("Enter employee's name or 'Done' to finish): ")
+    if name == "Done" or name == "done":
+        break
+
+    # ask for hours worked & pay rate
+    try:
+        pay_rate = float(input(f"What is {name}'s pay rate?: "))
+        hrs_worked = float(input(f"How many hours did {name} work: "))
+    except ValueError:
+        print("Invalid input. Please enter numeric values for pay rate and hours.")
+        continue
+
+    # Calculate reg and overtime pay
+    if hrs_worked > 40:
+        reg_hours = 40
+        overtime_hours = hrs_worked - 40
+    else:
+        reg_hours = hrs_worked
+        overtime_hours = 0
+
+    reg_pay = reg_hours * pay_rate
+    overtime_pay = overtime_hours * (pay_rate * 1.5)
+    gross_pay = reg_pay + overtime_pay
+
+    # totals
+    total_reg_pay += reg_pay
+    total_overtime_pay += overtime_pay
+    total_gross_pay += gross_pay
+    employee_count += 1
+
+    # Display individual employee pay
+    print("-" * 70 ) 
+    print(f"Employee name: {name}\n")
+    print("Overtime pay", "  Reg hour pay", " Gross pay", sep= " " *9)
+    print("-" * 70 )
+    print(f"${overtime_pay:<21.2f} ${reg_pay:<20.2f} ${gross_pay:.2f}\n")
+
+# display Summary
+print("\n-------- Pay Summary --------------")
+print(f"Total employees entered: {employee_count}")
+print(f"Total amount paid regular hours: ${total_reg_pay:.2f}")
+print(f"Total amount paid overtime: ${total_overtime_pay:.2f}")
+print(f"Total amount paid gross: ${total_gross_pay:.2f}")
+print("-------------------------------------")
