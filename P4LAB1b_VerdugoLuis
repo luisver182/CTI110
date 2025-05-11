@@ -1,0 +1,38 @@
+# Verdugo Luis
+# 05/07/2025
+# P4LAB1b
+# use of loops and turtle to draw
+
+#import the library
+import turtle
+
+#create a turtle object
+win = turtle.Screen()
+pen = turtle.Turtle()
+
+#set turtle option
+pen.pensize(3)
+pen.speed(1)
+pen.pencolor("turquoise")
+pen.shape("turtle")
+#draw V
+pen.penup()
+pen.goto(-100, 0)
+pen.pendown()
+pen.left(120)
+pen.forward(100)
+pen.penup()
+pen.goto(-100, 0)
+pen.pendown()
+pen.right(60)
+pen.forward(100)
+#draw L
+pen.penup()
+pen.goto(-25,85)
+pen.pendown()
+pen.left(210)
+pen.forward(90)
+pen.left(90)
+pen.forward(50)
+
+win.mainloop()
